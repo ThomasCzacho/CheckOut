@@ -17,9 +17,23 @@ import PaymentForm from './PaymentForm';
 import Review from './Review';
 import { Avatar } from '@mui/material';
 
+
+
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <AppBar
+        position="absolute"
+        color="secondary"
+        elevation={0}
+        sx={{
+          position: 'relative',
+          borderTop: (t) => `1px solid ${t.palette.divider}`,
+        }}
+
+      >
+    
+    <Toolbar align="center">
+      <Typography variant="body2" color="text.secondary" align="center" padding='10px'>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
         Your Website
@@ -27,6 +41,14 @@ function Copyright() {
       {new Date().getFullYear()}
       {'.'}
     </Typography>
+    <Avatar
+        alt="Remy Sharp"
+        src="https://brandpalettes.com/wp-content/uploads/2018/08/LEGO-Logo-300x300.png?ezimgfmt=ng:webp/ngcb1"
+        sx={{ width: 28, height: 28 }}
+        variant="square"
+/>
+    </Toolbar>
+    </AppBar>
   );
 }
 
@@ -62,6 +84,7 @@ const theme = createTheme({
         main: '#ffed00',
         darker: '#ffed00',
       },
+      
     },
     typography: {
         fontFamily: [
@@ -118,7 +141,7 @@ export default function Checkout() {
         </Toolbar>
       </AppBar>
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
-        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
+        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 }}}>
           <Typography component="h1" variant="h4" align="center">
             Checkout
           </Typography>
@@ -153,6 +176,7 @@ export default function Checkout() {
 
                   <Button
                     variant="contained"
+                    
                     onClick={handleNext}
                     sx={{ mt: 3, ml: 1 }}
                   >
@@ -163,8 +187,9 @@ export default function Checkout() {
             )}
           </React.Fragment>
         </Paper>
-        <Copyright />
+        
       </Container>
+      <Copyright />
     </ThemeProvider>
   );
 }

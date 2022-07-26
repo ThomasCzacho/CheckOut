@@ -60,9 +60,9 @@ export default function Review() {
             <ListItemText primary={product.name} secondary={product.desc} />
             <Typography variant="body2" sx={{ py: 1, px: 2 }}>{product.price}</Typography>
             <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src={product.src} variant='square' sx={{ width: 56, height: 56 }} />
+          <Avatar alt="Remy Sharp" src={product.src} variant='square' sx={{ width: 56, height: 40 }} />
         </ListItemAvatar>
-            
+        
           </ListItem>
         ))}
 
