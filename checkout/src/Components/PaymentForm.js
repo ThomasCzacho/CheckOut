@@ -5,6 +5,7 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
+import { Button } from '@mui/material';
 export default function PaymentForm() {
   return (
     <React.Fragment>
@@ -55,10 +56,17 @@ export default function PaymentForm() {
         </Grid>
         <Grid item xs={12}>
           <FormControlLabel
-            control={<Checkbox color="secondary" name="saveCard" value="yes" />}
+            control={<Checkbox color="primary" name="saveCard" value="yes" />}
             label="Remember credit card details for next time"
           />
         </Grid>
+        <Grid align='center'alignCenter item xs={12} md={6}>
+        
+        <Button variant="contained" href="#contained-buttons" color='paypal' text='primary'>
+  Continue With Paypal
+</Button>
+      
+    </Grid>
       </Grid>
     </React.Fragment>
   );

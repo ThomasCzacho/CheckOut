@@ -16,7 +16,8 @@ import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
 import { Avatar } from '@mui/material';
-
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 
 function Copyright() {
@@ -82,6 +83,10 @@ const theme = createTheme({
       },
       secondary: {
         main: '#ffed00',
+        darker: '#ffed00',
+      },
+      paypal: {
+        main: '#00457C',
         darker: '#ffed00',
       },
       
@@ -163,6 +168,18 @@ export default function Checkout() {
                   confirmation, and will send you an update when your order has
                   shipped.
                 </Typography>
+                <Avatar
+        alt="Remy Sharp"
+        src="https://snipstock.com/assets/cdn/png/0484cedc7bfa64d6520be74affa76126.png"
+        sx={{ width: 64, height:88
+         }}
+        variant="square"
+        
+/>
+<FormControlLabel
+            control={<Checkbox color="primary" name="Promo" value="yes" />}
+            label="I wish to Recieve LEGO® Promotions and Updates by Email"
+          />
               </React.Fragment>
             ) : (
               <React.Fragment>
